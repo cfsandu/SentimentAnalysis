@@ -34,7 +34,7 @@ clf = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
 def parse_input(ui):
     SPLIT = ','
 
-    lst = list(ui.split(SPLIT))
+    lst = list(ui.splitlines())  #(ui.split(SPLIT))
     yield lst
 
 dfdict = {}
@@ -47,6 +47,7 @@ if submit:
     #for sentence in lst:
     it = parse_input(user_input) #...NICER
     for sentence in next(it):
+    #for sentence in parse_input(user_input) :
         #res = model(sentence)
         res = clf(sentence) #...NICER
         txtlst.append(sentence)
