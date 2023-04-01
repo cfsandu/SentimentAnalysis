@@ -7,6 +7,8 @@ from transformers import AutoTokenizer, TFAutoModelForSequenceClassification
 st.title('Sentiment Analyser App')
 st.write('Welcome to my sentiment analysis app!')
 
+st.write('Please add lines in the Form, for Sentiment Analysis!')
+
 form = st.form(key='sentiment-form')
 user_input = form.text_area('Enter your text')
 submit = form.form_submit_button('Submit')
