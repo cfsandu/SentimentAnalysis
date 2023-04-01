@@ -17,4 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://cfsandu:$HF_TOKEN@huggingface.co/spaces/cfsandu/OnLineSentimentAnalysis main
+        run: git push https://cfsandu:$HF_TOKEN@huggingface.co/spaces/cfsandu/OnLineSentimentAnalysis main
